@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/personal-crm/static/css/main.073c9b0a.css",
+    "main.js": "/personal-crm/static/js/main.df61026a.js",
+    "index.html": "/personal-crm/index.html",
+    "main.073c9b0a.css.map": "/personal-crm/static/css/main.073c9b0a.css.map",
+    "main.df61026a.js.map": "/personal-crm/static/js/main.df61026a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.df61026a.js"
+  ]
+}
