@@ -1,0 +1,19 @@
+.wrap-fill {
+  width: 100%;
+}
+
+.wrap-center {
+  width: 90%;
+}
+
+@media only screen and (min-width: 700px) {
+  .md-wrap-fit {
+    width: 40vw;
+  }
+}
+
+@media only screen and (min-width: 1181px) {
+  .md-wrap-fit {
+    width: 500px;
+  }
+}

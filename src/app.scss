@@ -1,0 +1,55 @@
+/* --PAGE CLASSES--  */
+.page {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .wrap-fill {
+    width: 100%;
+  }
+  
+  .wrap-center {
+    width: 90%;
+  }
+  
+  /* styles */
+  .page-body {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    padding: 7vh 0;
+  }
+  .page-about, .page-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .page-about {
+    display: none;
+    position: relative;
+    background-color: #F8F8F8;
+    padding: 3vh 2vh;
+  }
+  @media only screen and (min-width: 700px) {
+    .page-about, .page-content {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .page-about {
+      display: block;
+    }
+    .md-wrap-fit {
+      width: 40vw;
+    }
+  }
+  
+  @media only screen and (min-width: 1181px) {
+    .md-wrap-fit {
+      width: 500px;
+    }
+  }

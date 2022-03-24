@@ -1,23 +1,28 @@
-import { Banner } from '../../../atoms';
+import React, { useEffect } from 'react';
+
+/*
+ * Components
+ */
 import { LoginForm, LoginOptions } from '../../../molecules';
-import { About } from '../../../organisms/About';
-import './login.css';
+/*
+ * Styles
+ */
+import './login.scss';
+
+import { Text } from '../../../atoms/Text';
 
 const Login = () => {
-  return (
-    <section className='page'>
-      <Banner />
-      <div className='login-page-body'>
-        <div className='login-page-about'>
-          <About classes='wrap-center md-wrap-fit' />
-        </div>
-        <div className='login-page-user'>
-          <LoginForm classes='wrap-center md-wrap-fit'/>
-          <LoginOptions classes='wrap-center md-wrap-fit'/>
-        </div>
+  useEffect(() => {
+    document.title = 'Login';
+  }, []);
 
-      </div>
-    </section>
+  return (
+    <>
+      <Text size={30} weight='500' text='Login' />
+
+      <LoginForm classes='wrap-center md-wrap-fit' />
+      <LoginOptions classes='wrap-center md-wrap-fit' />
+    </>
   );
 };
 

@@ -1,60 +1,41 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 /*
-* Components
-*/
-import Typography from '@mui/material/Typography';
+ * Components
+ */
+
+import { Text } from '../../atoms/Text';
+import { AboutImage } from '../../molecules/AboutImage/AboutImage';
 
 /*
-* Enums
-*/
+ * Enums
+ */
 import { Users } from '../../../enums/users';
 
-export const About = (props) => {
-  const renderImages = (image, name) => {
-    return (
-      <img
-        src={image}
-        alt={name}
-        style={{ width: '13%', marginRight: '10px' }}
-      />
-    );
-  };
+/*
+ * Styles
+ */
+import './styles.scss';
 
+export const About = ({ classes }) => {
   return (
-    <div className={`${props.classes}`} style={{padding: '7vh 0'}}>
-      <Typography
-        variant='h4'
-        component='div'
-        gutterBottom
-        sx={{ fontSize: '30px', color: '#858585' }}
-      >
-        About this tool
-      </Typography>
+    <div className={`${classes}`}>
+      <Text text='About this tool' size={30} weight={600} />
 
-      <Typography
-        variant='body2'
-        gutterBottom
-        component='div'
-        paragraph={true}
-        sx={{ color: '#858585' }}
-      >
-        subtitle2. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Quos blanditiis tenetur
-      </Typography>
+      <Text
+        text='subtitle2. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Quos blanditiis tenetur'
+        size={14}
+      />
 
-      <div style={{ position: 'absolute', bottom: 0, zIndex: 0 }}>
-        <Typography
-          variant='string'
-          component='div'
-          gutterBottom
-          sx={{ fontSize: '30px', color: '#858585', fontWeight: 200 }}
-        >
-          About the Authors
-        </Typography>
-
-        {Users.map(({ image, name }) => renderImages(image, name))}
+      <div className='box__image'>
+        <AboutImage users={Users} />
       </div>
     </div>
   );
+};
+
+About.propTypes = {
+  classes: PropTypes.string,
 };
