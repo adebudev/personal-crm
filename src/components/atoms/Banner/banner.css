@@ -1,0 +1,19 @@
+.atom-banner {
+    background-color: #0D3411;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.atom-banner__text {
+    font-weight: 600;
+    font-size: 30px;
+    color: white;
+}
+.atom-banner__text span {
+    font-weight: 200;
+    font-size: 16px;
+}
+.atom-holder {
+}
