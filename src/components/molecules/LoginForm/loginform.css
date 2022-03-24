@@ -1,0 +1,9 @@
+.mol-form-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 7vh 0;
+}
+.mol-form-login__field {
+  margin-bottom: 20px;
+}
