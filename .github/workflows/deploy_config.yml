@@ -1,5 +1,11 @@
 name: Build and Deploy
-on: [push]
+on:
+  push:
+    branches: [ feature/automatic_deploy_to_gh-pages ]
+#  pull_request:
+#    branches: [ master ]
+#    types: [closed]
+
 jobs:
   build-and-deploy:
     concurrency: ci-${{ github.ref }}
